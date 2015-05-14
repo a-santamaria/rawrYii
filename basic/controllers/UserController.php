@@ -71,7 +71,7 @@ class UserController extends Controller
 
         $model = new User();
         //$json_array = Yii::$app->session['json_array'];
-        $json_array = json_decode(Yii::$app->getRequest()->getRawBody(), true);
+        //$json_array = json_decode(Yii::$app->getRequest()->getRawBody(), true);
         //echo $json_array['soy'];
         //echo $json_array['soy'];
         /*
