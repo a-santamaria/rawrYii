@@ -60,14 +60,19 @@ class UserController extends Controller
      */
     public function actionCreate()
     {
+      echo "entre a create";
         $model = new User();
+        $request_body = file_get_contents('php://input');
+        $json_array = json_decode($request_body, true);
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        echo $json_array;
+        echo $json_array['soy'];
+        if ($model->load($json_array) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->username]);
         } else {
-            return $this->render('create', [
+            /*return $this->render('create', [
                 'model' => $model,
-            ]);
+            ]);*/
         }
     }
 
