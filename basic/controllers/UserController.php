@@ -66,13 +66,13 @@ class UserController extends Controller
     public function actionCreate()
     {
         echo "entre a create";
-        $request_body = file_get_contents('php://input');
-        $json_array = json_decode($request_body, true);
+        /*$request_body = file_get_contents('php://input');
+        $json_array = json_decode($request_body, true);*/
 
         $model = new User();
         //$json_array = Yii::$app->session['json_array'];
 
-        echo $json_array['soy'];
+        //echo $json_array['soy'];
         //echo $json_array['soy'];
         /*
         if ($model->load($json_array) && $model->save()) {
