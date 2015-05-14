@@ -2,10 +2,10 @@
 
 // comment out the following two lines when deployed to production
 echo "igual entro aca";
-$request_body = file_get_contents('php://input');
+/*$request_body = file_get_contents('php://input');
 $json_array = json_decode($request_body, true);
 
-echo $json_array['soy'];
+echo $json_array['soy'];*/
 defined('YII_DEBUG') or define('YII_DEBUG', true);
 defined('YII_ENV') or define('YII_ENV', 'dev');
 
