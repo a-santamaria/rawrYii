@@ -54,10 +54,11 @@ class SiteController extends Controller
 
     public function actionManager()
     {
-        /*$request_body = file_get_contents('php://input');
-        $json_array = json_decode($request_body, true);*/
+        $request_body = file_get_contents('php://input');
+        $json_array = json_decode($request_body, true);
         echo "manager";
         //echo $json_array;
+        Yii::$app->session['json_array'] = $json_array;
         $this->redirect('user/create');
 
         //return $this->render('index');
