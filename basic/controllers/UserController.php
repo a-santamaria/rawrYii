@@ -1,9 +1,11 @@
 <?php
 
+namespace app\controllers;
+
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-namespace app\controllers;
+
 
 use Yii;
 use app\models\User;
