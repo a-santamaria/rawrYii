@@ -1,5 +1,8 @@
 <?php
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 namespace app\controllers;
 
 use Yii;
@@ -61,19 +64,22 @@ class UserController extends Controller
     public function actionCreate()
     {
         echo "entre a create";
+        $request_body = file_get_contents('php://input');
+        $json_array = json_decode($request_body, true);
+
         $model = new User();
-        $json_array = Yii::$app->session['json_array'];
+        //$json_array = Yii::$app->session['json_array'];
 
-        //echo $json_array = Yii::$app->request->post();
+        echo $json_array['soy'];
         //echo $json_array['soy'];
-
+        /*
         if ($model->load($json_array) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->username]);
         } else {
             /*return $this->render('create', [
                 'model' => $model,
-            ]);*/
-        }
+            ]);* /
+        }*/
     }
 
     /**
